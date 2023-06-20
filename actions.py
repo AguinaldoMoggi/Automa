@@ -71,7 +71,7 @@ def set_fishing_rod():
 
 def wait_bubble(fish_position):
     while globals.running:
-        boia = pyautogui.locateOnScreen("boia.png", confidence=0.8)
+        boia = pyautogui.locateOnScreen("boia.png", confidence=0.8, region=fish_position + FISH_SIZE)
         bolhas = pyautogui.locateOnScreen(
             "bolhas.png", confidence=0.8, region=fish_position + FISH_SIZE
         )
